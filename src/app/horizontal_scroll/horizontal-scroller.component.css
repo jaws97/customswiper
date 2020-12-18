@@ -1,0 +1,50 @@
+.horizontal-scroll-container {
+    position: relative;
+    width: auto;
+    min-height: 34vh;
+}
+.prevBtn, .nextBtn, .nextLoading {
+    outline: 0;
+    position: absolute;
+    top: 44%;
+    transform: translateY(-50%);
+    z-index: 999;
+}
+.prevBtn{
+    left: -12px;
+}
+.nextBtn{
+    right: -16px;
+}
+
+.nav-btns{
+    position: relative;
+    left: -3px;
+    top: 2px;
+}
+
+.horizontal-scroll-content {
+    overflow-x: auto;
+    -webkit-overflow-scrolling:touch;
+    height: 34vh;
+    flex-wrap: nowrap;
+    display: flex;
+    align-items: stretch;
+  
+}
+ .horizontal-scroll-content::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+} 
+
+.btncircle{
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 50%;
+    background: #007ad9;
+    box-shadow: 0 3px 5px -1px rgba(0,0,0,.2), 
+    0 6px 10px 0 rgba(0,0,0,.14), 0 1px 18px 0 rgba(0,0,0,.12);
+    border: none;
+}

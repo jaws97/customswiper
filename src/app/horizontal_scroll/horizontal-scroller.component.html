@@ -1,0 +1,15 @@
+<section class="horizontal-scroll-container h-full">
+  <button (click)="showPrev()" class="prevBtn btncircle btn-primary">
+    <span>
+      <mat-icon class="nav-btns">keyboard_arrow_left</mat-icon>
+    </span>
+  </button>
+  <div class="horizontal-scroll-content" #horizontalScrollElem>
+    <ng-content></ng-content>
+  </div>
+  <button (click)="showNext()" class="nextBtn btncircle btn-primary">
+    <span>
+      <mat-icon class="nav-btns">keyboard_arrow_right</mat-icon>
+    </span>
+  </button>
+</section>

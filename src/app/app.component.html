@@ -1,0 +1,64 @@
+<div>
+  <div class="container" style="margin-top:40px">
+    <div>
+      <h1 style="font-weight: 600;">
+        Most viewed movies
+      </h1>
+    </div>
+
+    <app-horizontal-scroller>
+      <div *ngFor="let item of moviesLists;let ind = index">
+        <div class="meeting-card mr-2 h-100">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-md-12 col-12">
+                <span class="card-title blue bold">
+                  {{item.name}}
+                </span>
+                <span class="publish-text">
+                  {{item.category}}
+                </span>
+              </div>
+              <div class="col-md-9 col-12" style="margin-top: 4px;">
+                <span class="quarter-text">
+                  {{item.director}}
+                </span>
+              </div>
+            </div>
+            <div class="row" style="margin-top:15px" *ngIf="!(ind==4)">
+              <div class="col-md-12">
+                <div mat-line>
+                  <span class="time-container">
+                    <mat-icon class="calender-icon">calendar_today </mat-icon>
+                  </span>
+                  <span>
+                    {{item.date}}
+                  </span>
+                </div>
+              </div>
+              <div class="col-md-12" style="margin-top: 4px;">
+                <div mat-line>
+                  <span class="time-container">
+                    <mat-icon class="time-icon">access_time</mat-icon>
+                  </span>
+                  <span>
+                    {{item.runtime}}
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="row" style="margin-top:15px" *ngIf="ind==4">
+              <div class="col-md-12 fight-club">
+                You don't talk about it. Period
+              </div>
+            </div>
+            <div style="margin-top: 5px;">
+              <mat-divider></mat-divider>
+              <button mat-raised-button style="line-height: 2;margin-top: 6px;">Watch</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </app-horizontal-scroller>
+  </div>
+</div>
